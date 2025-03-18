@@ -1,0 +1,93 @@
+[debug] [2025-03-18T03:08:39.321Z] ----------------------------------------------------------------------
+[debug] [2025-03-18T03:08:39.327Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\manoj.g\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting --debug
+[debug] [2025-03-18T03:08:39.328Z] CLI Version:   13.34.0
+[debug] [2025-03-18T03:08:39.329Z] Platform:      win32
+[debug] [2025-03-18T03:08:39.329Z] Node Version:  v22.11.0
+[debug] [2025-03-18T03:08:39.329Z] Time:          Tue Mar 18 2025 08:38:39 GMT+0530 (India Standard Time)
+[debug] [2025-03-18T03:08:39.329Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-03-18T03:08:39.725Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-03-18T03:08:39.726Z] > authorizing via signed-in user (manoj.ganesan2000@gmail.com)
+[debug] [2025-03-18T03:08:39.728Z] [iam] checking project employee-details-ca920 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-03-18T03:08:39.732Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:39.734Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:39.738Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-details-ca920:testIamPermissions [none]
+[debug] [2025-03-18T03:08:39.740Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-details-ca920:testIamPermissions x-goog-quota-user=projects/employee-details-ca920
+[debug] [2025-03-18T03:08:39.742Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-details-ca920:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-18T03:08:41.814Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-details-ca920:testIamPermissions 200
+[debug] [2025-03-18T03:08:41.816Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employee-details-ca920:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-03-18T03:08:41.819Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:41.821Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:41.822Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/employee-details-ca920 [none]
+[debug] [2025-03-18T03:08:42.757Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/employee-details-ca920 200
+[debug] [2025-03-18T03:08:42.758Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/employee-details-ca920 {"projectId":"employee-details-ca920","projectNumber":"267631287652","displayName":"Employee-Details","name":"projects/employee-details-ca920","resources":{"hostingSite":"employee-details-ca920"},"state":"ACTIVE","etag":"1_33264c7f-3c7c-4812-bfc6-8e8bdec889bb"}
+[info] 
+[info] === Deploying to 'employee-details-ca920'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2025-03-18T03:08:42.778Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:42.779Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:42.781Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions [none]
+[debug] [2025-03-18T03:08:42.782Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2025-03-18T03:08:44.599Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions 200
+[debug] [2025-03-18T03:08:44.600Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions {"name":"projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[employee-details-ca920]: beginning deploy... 
+[info] i  hosting[employee-details-ca920]: found 15 files in dist/angular-app-demo/browser 
+[debug] [2025-03-18T03:08:44.629Z] [hosting] uploading with 200 concurrency
+[debug] [2025-03-18T03:08:44.713Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:44.715Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:44.721Z] [hosting] hash cache [ZGlzdFxhbmd1bGFyLWFwcC1kZW1vXGJyb3dzZXI] stored for 15 files
+[debug] [2025-03-18T03:08:44.723Z] [hosting][hash queue][FINAL] {"max":71,"min":1,"avg":24,"active":0,"complete":15,"success":15,"errored":0,"retried":0,"total":15,"elapsed":90}
+[debug] [2025-03-18T03:08:44.726Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564:populateFiles [none]
+[debug] [2025-03-18T03:08:44.728Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564:populateFiles {"files":{"/assets/role.svg":"4b14ba7e1888b485a622fb4f7eb3da3d30fe2dce615d8d8672a1aaf4d1f7bdaa","/assets/right-arrow.svg":"838e67c0ccc426d08b724a5344626543fc3e1882bf073a6a21c54e14ad4f716e","/assets/person.svg":"47fa18bd5ef00b6b0ea166dafa91353e1dac021d5e922ef92f099bcad70db73e","/assets/noRecord.svg":"05e2233b34c3660831a849e04595eb5beb3ae9bd107b0d90d88a5eece13c1876","/assets/delete.svg":"071ad3416b6d71b8eeb91e911f9d24bb5b74cb31f6d6118ad3de58be3b47f909","/assets/date.svg":"87c107f36b8ef823d3f93089eb9e8c0e15ef252caba5118ba7aaa643c2be4b1f","/main-FY5RYAUW.js":"2c0327eb9e27675e16460b17eecdad62d5c77cd75baca89c7d4c12d73fadf9c3","/chunk-EJJBCPAK.js":"33fc2cd1bda44e7926055089c540a0f49d2b470f43585f6789f759ae5d063e8a","/polyfills-FFHMD2TL.js":"736494ba509ebe13a13ff57f0d4921ecfd9eb2ac4e8efe5d5fc1704b4b1d9b35","/chunk-NWWNIUN3.js":"8c0f2d142dca52719b62eff42d9c664e53bea89b298f4b2cdad597dbbf673498","/index.html":"d177e0d62c88cd2f7bd1772b553a343f816ae9f4a97901950a23c5d7c8611cd9","/styles-TIYKZN3C.css":"ad427ea99e40d23fdd0fc89763e581a20574de12248c81d7e0656298e9b600fc","/chunk-GTBRNCCP.js":"b504bacbe481ab2326aaa8fc6879655c659bf75fa97a674c50cf2a05c364e9d8","/chunk-PZ54W7KV.js":"925527be5bf69fa9c71649a2b7ccb6d9554260b39f778c4180ef101cfe473dde","/chunk-DPJX6IGA.js":"c22431d9eb3b2e4b22a6d435aade1aa9c3c0f3b8c601135cfc7f3b625b32cc54"}}
+[debug] [2025-03-18T03:08:45.295Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564:populateFiles 200
+[debug] [2025-03-18T03:08:45.297Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/employee-details-ca920/versions/ff0827afc07e9564/files"}
+[debug] [2025-03-18T03:08:45.299Z] [hosting][populate queue][FINAL] {"max":586,"min":586,"avg":586,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":586}
+[debug] [2025-03-18T03:08:45.300Z] [hosting] uploads queued: 0
+[debug] [2025-03-18T03:08:45.301Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1742267325301}
+[info] i  hosting: upload complete 
+[info] +  hosting[employee-details-ca920]: file upload complete 
+[debug] [2025-03-18T03:08:45.304Z] [hosting] deploy completed after 696ms
+[debug] [2025-03-18T03:08:45.305Z] [
+  {
+    "config": {
+      "public": "dist/angular-app-demo/browser",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "employee-details-ca920"
+    },
+    "version": "projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564"
+  }
+]
+[info] i  hosting[employee-details-ca920]: finalizing version... 
+[debug] [2025-03-18T03:08:45.314Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:45.315Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:45.318Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions/ff0827afc07e9564 updateMask=status%2Cconfig
+[debug] [2025-03-18T03:08:45.319Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions/ff0827afc07e9564 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2025-03-18T03:08:45.917Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions/ff0827afc07e9564 200
+[debug] [2025-03-18T03:08:45.919Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/versions/ff0827afc07e9564 {"name":"projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-18T03:08:43.755995Z","createUser":{"email":"Manoj.ganesan2000@gmail.com"},"finalizeTime":"2025-03-18T03:08:45.472395Z","finalizeUser":{"email":"Manoj.ganesan2000@gmail.com"}}
+[debug] [2025-03-18T03:08:45.920Z] [hosting] finalized version for employee-details-ca920:[object Object]
+[info] +  hosting[employee-details-ca920]: version finalized 
+[info] i  hosting[employee-details-ca920]: releasing new version... 
+[debug] [2025-03-18T03:08:45.923Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:45.923Z] Checked if tokens are valid: true, expires at: 1742270614991
+[debug] [2025-03-18T03:08:45.924Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/channels/live/releases versionName=projects%2F267631287652%2Fsites%2Femployee-details-ca920%2Fversions%2Fff0827afc07e9564
+[debug] [2025-03-18T03:08:45.925Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/channels/live/releases {}
+[debug] [2025-03-18T03:08:46.746Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/channels/live/releases 200
+[debug] [2025-03-18T03:08:46.748Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/employee-details-ca920/channels/live/releases {"name":"projects/267631287652/sites/employee-details-ca920/channels/live/releases/1742267325662000","version":{"name":"projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-18T03:08:43.755995Z","createUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"},"finalizeTime":"2025-03-18T03:08:45.472395Z","finalizeUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"}},"type":"DEPLOY","releaseTime":"2025-03-18T03:08:45.662Z","releaseUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"}}
+[debug] [2025-03-18T03:08:46.751Z] [hosting] release: {"name":"projects/267631287652/sites/employee-details-ca920/channels/live/releases/1742267325662000","version":{"name":"projects/267631287652/sites/employee-details-ca920/versions/ff0827afc07e9564","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2025-03-18T03:08:43.755995Z","createUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"},"finalizeTime":"2025-03-18T03:08:45.472395Z","finalizeUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"}},"type":"DEPLOY","releaseTime":"2025-03-18T03:08:45.662Z","releaseUser":{"email":"Manoj.ganesan2000@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocIAwEllrc8ogOaqvmXAVbvwMwcxJX-bmKCZ-d7Bp9U7D9IQZq1f"}}
+[info] +  hosting[employee-details-ca920]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/employee-details-ca920/overview
+[info] Hosting URL: https://employee-details-ca920.web.app

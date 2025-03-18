@@ -1,0 +1,74 @@
+<nav class="navbar">
+  Employee List
+</nav>
+<div *ngIf="employeeService.employees().length > 0">
+  <h3 class="section-title current">Current employees</h3>
+  <div class="employee-container">
+    <div class="section">
+      <div *ngFor="let employee of currentEmployees;else noEmployees" class="employee-card"
+        [ngStyle]="{'transform': 'translateX(' + employee.swipeOffset + 'px)'}"
+        (touchstart)="onSwipeStart($event, employee)" (mousedown)="onSwipeStart($event, employee)"
+        (touchmove)="onSwipeMove($event, employee)" (mousemove)="onSwipeMove($event, employee)"
+        (touchend)="onSwipeEnd(employee)" (mouseup)="onSwipeEnd(employee)" (mouseleave)="onSwipeCancel(employee)"
+        (click)="editEmployee(employee.id, employee)">
+
+        <div class="content">
+          <h4>{{ employee.name }}</h4>
+          <p class="role">{{ employee.role }}</p>
+          <p class="date">From {{ employee.fromDate | date: 'd MMM, yyyy' }}</p>
+        </div>
+
+        <!-- DELETE SWIPE ACTION -->
+        <div class="delete-swipe-action" *ngIf="employee.swipeOffset < -50">
+          <button class="delete-button" (click)="deleteEmployee(employee.id)">
+            <img src="../../assets/delete.svg" width="24px" height="24px">
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <h3 class="section-title previous">Previous employees</h3>
+  <div class="employee-container">
+    <div class="section">
+      <div *ngFor="let employee of previousEmployees;else noEmployees" class="employee-card"
+        [ngStyle]="{'transform': 'translateX(' + employee.swipeOffset + 'px)'}"
+        (touchstart)="onSwipeStart($event, employee)" (mousedown)="onSwipeStart($event, employee)"
+        (touchmove)="onSwipeMove($event, employee)" (mousemove)="onSwipeMove($event, employee)"
+        (touchend)="onSwipeEnd(employee)" (mouseup)="onSwipeEnd(employee)" (mouseleave)="onSwipeCancel(employee)"
+        (click)="editEmployee(employee.id, employee)">
+
+        <div class="content">
+          <h4>{{ employee.name }}</h4>
+          <p class="role">{{ employee.role }}</p>
+          <p class="date">
+            {{ employee.fromDate | date: 'd MMM, yyyy' }} -
+            {{ employee.toDate | date: 'd MMM, yyyy' }}
+          </p>
+        </div>
+
+        <!-- DELETE SWIPE ACTION -->
+        <div class="delete-swipe-action" *ngIf="employee.swipeOffset < -50">
+          <button class="delete-button" (click)="deleteEmployee(employee.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <p class="bottom-message">Swipe left to delete</p>
+  </div>
+</div>
+<!-- Floating Add Button -->
+<button mat-fab color="primary" class="add-button" (click)="addEmployee()">
+  +
+</button>
+
+<div *ngIf="employeeService.employees().length == 0">
+  <div class="no-employees">
+    <img src="../../assets/noRecord.svg" alt="No Employees" width="200">
+  </div>
+</div>

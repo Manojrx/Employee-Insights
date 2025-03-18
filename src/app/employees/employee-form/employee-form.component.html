@@ -1,0 +1,59 @@
+<nav class="navbar">
+
+    <span>
+        {{ isEditMode ? 'Edit Employee Details' : 'Add Employee Details' }}
+    </span>
+
+    <button *ngIf="isEditMode" class="items-center justify-center inherit " (click) = delete()>
+        <mat-icon>delete</mat-icon>
+    </button>
+</nav>
+<mat-card class="form-container">
+    <form [formGroup]="employeeForm" (ngSubmit)="submitEmployeeForm()">
+
+        <!-- Employee Name -->
+        <mat-form-field appearance="outline" class="full-width">
+            <img matPrefix src="../../assets/person.svg" width="24px" height="24px">
+            <input placeholder='Employee name' matInput formControlName="name" required>
+        </mat-form-field>
+
+        <!-- Select Role -->
+        <mat-form-field appearance="outline" class="full-width">
+            <img matPrefix src="../../assets/role.svg" width="24px" height="24px">
+            <mat-select formControlName="role" required placeholder="Select role" panelClass="mobile-select-panel">
+                <mat-option value="Product Designer">Product Designer</mat-option>
+                <mat-option value="Flutter Developer">Flutter Developer</mat-option>
+                <mat-option value="QA Tester">QA Tester</mat-option>
+                <mat-option value="Project Manager">Project Manager</mat-option>
+                <mat-option value="Product Owner">Product Owner</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!-- Date Fields -->
+        <div class="date-container" flex="100" fxLayout="row" fxLayoutAlign="space-around center">
+            <!-- From Date -->
+            <mat-form-field appearance="outline" class="date-field">
+                <img matPrefix src="../../assets/date.svg" width="24px" height="24px" (click)="fromPicker.open()" style="cursor: pointer;">
+                <input matInput [matDatepicker]="fromPicker" formControlName="fromDate" required placeholder="No date">
+                <mat-datepicker-toggle matSuffix [for]="fromPicker" style="display: none;"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #fromPicker [calendarHeaderComponent]="customHeader"></mat-datepicker>
+            </mat-form-field>
+
+            <!-- Arrow Icon -->
+            <img flex="10" src="../../assets/right-arrow.svg" class="arrow-icon" alt="Arrow">
+
+            <!-- To Date -->
+            <mat-form-field appearance="outline" class="date-field">
+                <img matPrefix src="../../assets/date.svg" width="24px" height="24px" (click)="toPicker.open()" style="cursor: pointer;">
+                <input matInput [matDatepicker]="toPicker" formControlName="toDate" required placeholder="No date" [min]="minDate">
+                <mat-datepicker-toggle matSuffix [for]="toPicker" style="display: none;"></mat-datepicker-toggle>
+                <mat-datepicker touchUi #toPicker [calendarHeaderComponent]="customHeader"></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <!-- Submit Button -->
+        <button mat-raised-button class="save-button" style="width: 100%; background-color: #1DA1F2; color: #FFFFFF;">
+            Save
+        </button>
+    </form>
+</mat-card>

@@ -1,0 +1,182 @@
+.custom-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    text-align: center;
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+  
+    button {
+      flex: 1;
+      text-transform: none;
+      font-weight: 500;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s, color 0.3s;
+    }
+  
+    /* Default styles */
+    .primary-btn {
+      background-color: #edf8ff;
+      color: #1DA1F2;
+    }
+  
+  
+    /* Selected button styles */
+   ::ng-deep button.selected {
+      background-color: #1DA1F2 !important;
+      color: white !important;
+      font-weight: bold;
+    }
+  
+    /* Month-Year Header */
+    .month-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+  
+      .month-label {
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      mat-icon {
+        font-size: 24px;
+        color: #666;
+      }
+    }
+
+  
+    /* Month-Year Header */
+    .month-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+  
+      .month-label {
+        font-size: 18px;
+        font-weight: bold;
+      }
+  
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+  
+      mat-icon {
+        font-size: 24px;
+        color: #666;
+      }
+    }
+    ::root {
+        --mdc-text-button-label-text-color: white;
+    }
+
+    ::ng-deep .selected-button{
+        background-color: #1DA1F2 !important;
+        color: white !important;
+        font-weight: bold;
+    }
+  }
+  ::ng-deep .selected-button{
+    background-color: #1DA1F2 !important;
+    color: white !important;
+    font-weight: bold;
+}
+  .custom-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.month-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    width: 93%;
+    background: white;
+    padding: 10px;
+    border-radius: 22px;
+}
+
+.footer-content {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.selected-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.cancel-btn {
+    background-color: #EDF8FF;
+    color: #1DA1F2;
+    min-width: 80px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+.save-btn {
+    background-color: #1DA1F2;
+    color: white;
+    min-width: 80px;
+    height: 40px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+::ng-deep .mat-mdc-select-arrow {
+    fill: #1DA1F2 !important;
+}
+::ng-deep :root {
+    --mat-datepicker-calendar-container-background-color: #FFFFFF !important;
+    --mat-datepicker-calendar-date-selected-state-background-color: #1DA1F2 !important;
+    --mdc-outlined-card-container-shape : 0px !important;
+    --mdc-elevated-card-container-elevation: 0px !important;
+    --mat-option-selected-state-layer-color: #b3e2ff !important;
+  }
+  .date-preview{
+    margin: 0px !important;
+  }
+  .mat-calender-table{
+    width:98% !important;
+  }

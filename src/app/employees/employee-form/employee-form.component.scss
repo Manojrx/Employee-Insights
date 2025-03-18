@@ -1,0 +1,196 @@
+
+  
+  /* Navbar */
+  .navbar {
+    background-color: #1DA1F2; // Blue header background
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  /* Card container */
+  .form-container {
+    background-color: #ffffff;
+    margin: 20px;
+  }
+  
+  /* Full-width input fields */
+  .full-width {
+    width: 100%;
+  }
+  
+  /* Date fields container */
+  .date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; // Space between elements
+    margin-top: 10px;
+    background-color: #ffffff;
+  }
+  
+  /* Individual date field */
+  .date-field {
+    flex: 1; // Equal width for both date fields
+    min-width: 120px;
+    background-color: #ffffff;
+  }
+  
+  /* Arrow icon */
+  .arrow-icon {
+    width: 20px;
+    height: auto;
+    padding-bottom: 15px;
+  }
+  
+  /* Mat-form-field adjustments */
+  mat-form-field {
+    display: flex;
+    align-items: center;    background-color: #ffffff;
+    border-radius: 5px;
+
+  }
+  
+  /* Image prefix inside input fields */
+  img[matPrefix] {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .inherit{
+   cursor: pointer;
+    all: unset;  
+  }
+  /* Button */
+  button {
+    margin-top: 15px;
+    background-color: #1DA1F2;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  ::ng-deep mat-form-field {
+    .mat-form-field-outline {
+      color: #ffffff; // Change the default border color
+    }
+  
+    &.mat-focused .mat-form-field-outline {
+      color: #1DA1F2; // Change border color when focused
+    }
+  
+    &.mat-form-field-invalid .mat-form-field-outline {
+      color: #f44336; // Change border color for error state
+    }
+  }
+  .arrow{
+    margin-bottom: 5px;
+  }
+
+  ::ng-deep .mat-datepicker-content {
+    display: flex;
+    flex-direction: column-reverse; // Reverse order so actions come first
+    align-items: center;
+  }
+  
+  .date-picker-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px;
+    background: #fff;
+    border-bottom: 1px solid #ddd; 
+    position: absolute;
+    top: 0;
+    z-index: 10;
+  }
+  ::ng-deep :root {
+    --mat-datepicker-calendar-container-background-color: #FFFFFF !important;
+    --mat-datepicker-calendar-date-selected-state-background-color: #1DA1F2 !important;
+    --mdc-outlined-card-container-shape : 0px !important;
+    --mdc-elevated-card-container-elevation: 0px !important;
+    --mat-option-selected-state-layer-color: #b3e2ff !important;
+  }
+  .save-button {
+    width: 100%;
+    background-color: #1DA1F2;
+  }
+
+  ::ng-deep .mat-mdc-datepicker-actions {
+    display: flex !important;
+    justify-content: space-between;
+    padding: 16px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white; /* Ensures visibility */
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Prevent the buttons from shifting down in touch UI */
+  ::ng-deep .mat-mdc-dialog-surface {
+    padding-bottom: 60px; /* Adds space for the buttons */
+  }
+  
+
+  ::ng-deep .mat-calendar-body-label {
+    display: none !important;
+  }
+
+  ::ng-deep .mat-datepicker-content {
+    min-height: 500px !important; /* Increase panel height */
+    padding-bottom: 60px !important; /* Extra space for buttons */
+  }
+  ::ng-deep .mat-calendar-body-cell-content {
+    top: -10% !important;
+    width: 80%!important;
+    height: 80%!important;
+  }
+
+  ::ng-deep .mat-calendar {
+    padding-bottom: 50px !important; /* Ensures content doesn't overlap buttons */
+  }
+  
+  ::ng-deep .mat-datepicker-actions {
+    position: absolute !important;
+    bottom: 0;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  ::ng-deep .mat-mdc-select-panel {
+    background-color: #FFFFFF !important;
+  }
+
+  ::ng-deep .mat-mdc-card{
+    background-color : #FFFFFF;
+    border-color : #FFFFFF;
+    border-radius: 0px;
+    box-shadow: 0px;
+  }
+  ::ng-deep .mat-mdc-select-arrow {
+    fill: #1DA1F2 !important;
+}
+/* Add this to your global styles (e.g., styles.css) */
+@media (max-width: 600px) {
+  ::ng-deep .mobile-select-panel {
+    position: fixed !important;
+    bottom: 0 !important;
+    top: auto !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 16px 16px 0 0 !important;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  ::ng-deep .mat-select-panel {
+    max-height: 50vh !important; /* Adjust height as needed */
+  }
+}

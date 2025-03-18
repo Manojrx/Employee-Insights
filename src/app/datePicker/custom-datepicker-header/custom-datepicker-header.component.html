@@ -1,0 +1,40 @@
+<div class="custom-header">
+    <div class="row">
+        <button [ngClass]="{ 'selected-button': todaySelected }" mat-button class="primary-btn"
+            (click)="selectToday()">Today</button>
+        <button [ngClass]="{ 'selected-button': mondaySelected }" mat-button class="primary-btn"
+            (click)="selectNextMonday()">Next Monday</button>
+    </div>
+    <div class="row">
+        <button [ngClass]="{ 'selected-button': tuesdaySelected }" mat-button class="primary-btn"
+            (click)="selectNextTuesday()">Next Tuesday</button>
+        <button [ngClass]="{ 'selected-button': weekSelected }" mat-button class="primary-btn"
+            (click)="selectAfterOneWeek()">After 1 week</button>
+    </div>
+
+    <div class="month-header">
+        <button mat-icon-button (click)="goToPreviousMonth()">
+            <mat-icon>arrow_left</mat-icon>
+        </button>
+        <span class="month-label">{{ getFormattedMonthYear() }}</span>
+        <button mat-icon-button (click)="goToNextMonth()">
+            <mat-icon>arrow_right</mat-icon>
+        </button>
+    </div>
+</div>
+
+<div class="footer-container">
+    <div class="footer-content">
+        <div class="selected-date">
+            <img src="../../assets/date.svg" width="24px" height="24px">
+            <p style="margin: 0px;" *ngIf="retrieveSelectedDate()">
+                {{ retrieveSelectedDate() | date: 'd MMM yyyy' }}
+            </p>
+        </div>
+
+        <div class="footer-buttons">
+            <button mat-button (click)="dismissDateSelection()" class="cancel-btn">Cancel</button>
+            <button mat-button color="primary" (click)="confirmDateSelection()" class="save-btn">Save</button>
+        </div>
+    </div>
+</div>
