@@ -29,8 +29,8 @@ Added reference images to showcase the application features and UI.
 
 ![image](https://github.com/user-attachments/assets/7a7ee576-0d28-4a53-9360-0c0e90d703bc)
 
+![image](https://github.com/user-attachments/assets/61715703-9fa4-4b12-8e24-a05640a588de)
 
-![image](https://github.com/user-attachments/assets/b91817ed-2454-4045-ad08-3c0896b6bc67)
 
 Customised Calendar for Enhanced UI
 ![image](https://github.com/user-attachments/assets/db44ed71-ec01-4fd8-bde1-eb70aecdcfb8)
