@@ -1,4 +1,41 @@
-# AngularEmployeeApp
+# Employee Insights
+This project is a web-based employee management application built using Angular for the frontend, IndexedDB for local data storage, and Firebase for hosting and deployment.
+
+🚀 Features
+Employee Data Management – Add, update, and list employees dynamically.
+IndexedDB Integration – Enables offline storage and seamless data retrieval.
+Navigation & Routing – Implements dynamic navigation with multiple route handling.
+Firebase Deployment – Deployed on Firebase for easy access and scalability.
+
+📦 Tech Stack
+Frontend: Angular
+Database: IndexedDB
+Deployment: Firebase Hosting
+
+🔧 Setup & Installation
+
+Install dependencies
+
+npm install
+
+Run the development server
+
+ng serve
+
+
+Picture :
+Added reference images to showcase the application features and UI.
+![image](https://github.com/user-attachments/assets/e8641c43-9948-43f1-b6d0-c2200b729e74)
+
+![image](https://github.com/user-attachments/assets/7a7ee576-0d28-4a53-9360-0c0e90d703bc)
+
+
+![image](https://github.com/user-attachments/assets/b91817ed-2454-4045-ad08-3c0896b6bc67)
+
+Customised Calendar for Enhanced UI
+![image](https://github.com/user-attachments/assets/db44ed71-ec01-4fd8-bde1-eb70aecdcfb8)
+
+#Employee Insights
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
 
